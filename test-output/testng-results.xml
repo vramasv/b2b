@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ShirtMax Suite" duration-ms="17837" started-at="2021-07-21T18:41:42Z" finished-at="2021-07-21T18:42:00Z">
+    <groups>
+    </groups>
+    <test name="ShirtMax Search and Proceed" duration-ms="17837" started-at="2021-07-21T18:41:42Z" finished-at="2021-07-21T18:42:00Z">
+      <class name="b2bSite.tests.ShirtmaxTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="setUp" is-config="true" duration-ms="215" started-at="2021-07-21T18:41:42Z" finished-at="2021-07-21T18:41:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="beforeMethod" is-config="true" duration-ms="12701" started-at="2021-07-21T18:41:42Z" finished-at="2021-07-21T18:41:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@32fdec40]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="SingleOrderTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="SingleOrderTest" duration-ms="3694" started-at="2021-07-21T18:41:55Z" data-provider="getRegProducts" finished-at="2021-07-21T18:41:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[G500]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[BLACK]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[XL]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SingleOrderTest -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="getResult" is-config="true" duration-ms="3" started-at="2021-07-21T18:41:59Z" finished-at="2021-07-21T18:41:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SingleOrderTest status=SUCCESS method=ShirtmaxTests.SingleOrderTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="afterTest" is-config="true" duration-ms="753" started-at="2021-07-21T18:41:59Z" finished-at="2021-07-21T18:42:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:b2bSite.tests.ShirtmaxTests@18ef96]" name="tearDown" is-config="true" duration-ms="354" started-at="2021-07-21T18:42:00Z" finished-at="2021-07-21T18:42:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- b2bSite.tests.ShirtmaxTests -->
+    </test> <!-- ShirtMax Search and Proceed -->
+  </suite> <!-- ShirtMax Suite -->
+</testng-results>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ShirtMax Suite]">
+  <test thread-count="5" name="ShirtMax Search and Proceed(failed)">
+    <classes>
+      <class name="b2bSite.tests.ShirtmaxTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="SingleOrderTest" invocation-numbers="0"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- b2bSite.tests.ShirtmaxTests -->
+    </classes>
+  </test> <!-- ShirtMax Search and Proceed(failed) -->
+</suite> <!-- Failed suite [ShirtMax Suite] -->
