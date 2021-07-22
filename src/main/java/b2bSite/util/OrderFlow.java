@@ -59,7 +59,8 @@ public class OrderFlow {
 		File file = new File(SCENARIO_SHEET_PATH);
 		Workbook book = WorkbookFactory.create(file);
 		Sheet sheet = (org.apache.poi.ss.usermodel.Sheet) book.getSheet(sheetname);
-		int col = 0, j = 0;
+		int col = 0;
+	    // j = 0;
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) 
 		{
 			try {
@@ -71,17 +72,29 @@ public class OrderFlow {
 							
 				if (action.equalsIgnoreCase("sendkeys")) 
 					{
-						OrderFlow.sendKey(driver,locatorType,locatorValue,data[j]);
-						System.out.println(data[j]);
-						j++;
+						OrderFlow.sendKey(driver,locatorType,locatorValue,data[0]);
+						
 					}else if (action.equalsIgnoreCase("enterkey")) 
-					{   j--;
+					{  // j--;
 						OrderFlow.enterKey(driver,locatorType,locatorValue);
 						
 					}else if (action.equalsIgnoreCase("click"))
 					{
 						OrderFlow.click(driver,locatorType,locatorValue);
-					}
+						
+					}else if (action.equalsIgnoreCase("colorPick"))
+					{
+						System.out.println("Inside color picker");
+					   OrderFlow.colorPicker(driver, locatorType, locatorValue, data[1]);
+						   
+					}else if (action.equalsIgnoreCase("Input")) {
+						System.out.println("Inside Input");
+					    OrderFlow.sendKey(driver, locatorType, locatorValue, data[3]);
+												
+					}else if (action.equalsIgnoreCase("lookup")) {
+						System.out.println("Inside lookup");
+						OrderFlow.cartCheck(driver,locatorValue);
+					}		
 				
 				}
 			catch(Exception e) {
@@ -108,6 +121,23 @@ public class OrderFlow {
 		WebElement clkEle = OrderFlow.getElement(driver, locator, locatorType);
 		clkEle.click();
 	}	
+	
+	public static void colorPicker(WebDriver driver, String locatorType,String locator,String Data ) throws Exception {
+		Properties prop = TestUtil.initProperties();
+		String Color = Data;
+		String localXpath;
+		localXpath =prop.getProperty(locator)+Color+"']";
+		driver.findElement(By.xpath(localXpath)).click();
+		}
+
+	
+	
+	public static void cartCheck(WebDriver driver, String locator)throws IOException {
+		Properties prop = TestUtil.initProperties();
+		String cTitle = driver.findElement(By.id(prop.getProperty(locator))).getText();
+		String expectTitle = prop.getProperty("cartMsg");
+		Assert.assertEquals(cTitle, expectTitle);
+	}
 	
 	public static WebElement getElement(WebDriver driver, String locator, String locatorType) throws IOException {
 		Properties prop = TestUtil.initProperties();
