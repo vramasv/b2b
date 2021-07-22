@@ -42,24 +42,22 @@ public class ShirtmaxTests extends ExtentReport {
 	}
 	
 	@Test(dataProvider = "getRegProducts")
-	public void SingleOrderTest(String Style, String Color, String Size, String Qnty) throws Exception {
-		System.out.println("Style ---"+Style);
-		System.out.println("Shirtmax test------Started");
+	public void ShirtMaxTest(String Style, String Color, String Size, String Qnty) throws Exception {
+		//System.out.println("Style ---"+Style);
+		//System.out.println("Shirtmax test------Started");
 		Properties prop = TestUtil.initProperties();
 		test = extent.createTest("ShirtMax Search and Order ");
 		test.log(Status.INFO, "Opened Shirtmax Home Page ");
 		
-		//String[] data = { prop.getProperty("userid_admin"), prop.getProperty("pwd_admin"), Style, Color, Size, Qnty,
-		//		"804 N Jerry St", "Raymore", "Missouri", "64083-9763", "3333222111" };
-		String[] data = { Style,Color,Size,Qnty };
+		
 		//System.out.println("contens of data" + data[0]+','+data[1]);
 		OrderFlow orderflow = new OrderFlow();
 		orderflow.startOrder(driver, data, "SM", test);
 
 	}	
 	
-	@AfterTest
+	 @AfterTest
 	public void afterTest(){
 		driver.quit();
-	}
+	} 
 }
